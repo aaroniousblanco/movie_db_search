@@ -8,8 +8,8 @@ export default class MovieWidget extends React.Component {
       movie_display =
         <div>
             {this.props.results.results.map((object, index) =>
-              <p key={index}>{object.original_title}<br/>
-              <img src={"https:image.tmdb.org/t/p/w185_and_h278_bestv2" + object.poster_path} alt=""/></p>
+              <p className="movie-results" key={index}>{object.title}<br/>
+              <img src={object.poster_path === null ? "https://s-media-cache-ak0.pinimg.com/736x/3c/31/9d/3c319d51d730ea1f2c671583d9eb6a56.jpg" : "https:image.tmdb.org/t/p/w185_and_h278_bestv2" + object.poster_path} alt=""/></p>
             )}
         </div>
     } else if (this.props.results.total_results === 0) {

@@ -11,3 +11,15 @@ body {
 .search-area button {
   margin-left: 20px;
 }
+
+.movie-results {
+  float: right;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+.movie-results img {
+  width: 225px;
+  height: 275px;
+}

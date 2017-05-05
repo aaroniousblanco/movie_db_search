@@ -3,7 +3,10 @@ import MovieWidget from './MovieWidget';
 import * as actions from './MovieWidget.actions';
 
 const MovieWidgetContainer = ReactRedux.connect(
-  state => state,
+  state => ({
+    search_term: state.search_term,
+    results: state.results
+  }),
   actions
 )(MovieWidget)
 
